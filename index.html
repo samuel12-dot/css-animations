@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes colorChanger {
+            0% {
+                background: blue;
+                left: 0;
+                top: 0;
+            }
+
+            25% {
+                background: green;
+                left: 500px;
+                top: 0;
+            }
+
+            50% {
+                background: orangered;
+                left: 500px;
+                top: 500px;
+            }
+
+            75% {
+                background: purple;
+                left: 0;
+                top: 500px;
+
+            }
+
+            100% {
+                background: yellow;
+                left: 0;
+                top: 0;
+            }
+        }
+
+        body {
+            background: yellow;
+        }
+
+        .main {
+            width: 300px;
+            height: 300px;
+            background: blue;
+            position: relative;
+            /*             animation-name: colorChanger;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-iteration-count: 2;
+            animation-timing-function: linear; */
+            animation: colorChanger 5s 1s infinite ease-out;
+        }
+
+        @keyframes truckMover {
+            0% {
+                left: -200px;
+            }
+
+            100% {
+                left: 120%;
+            }
+        }
+
+        .truck {
+            position: fixed;
+            bottom: 0;
+            animation-name: truckMover;
+            animation-duration: 10s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            /* animation: truckMover 10s 0s infinite linear; */
+        }
+        .wheel-outer {
+            display: flex;
+            justify-content: space-between;
+            padding-inline: 15px;
+        }
+        @keyframes buttonColorChanger {
+            0% {
+                background: red;
+            }
+            100% {
+                background: blue;
+            }
+        }
+        button {
+            outline: none;
+            border: none;
+            color: white;
+            padding-inline: 20px;
+            padding-block: 10px;
+            border-radius: 50px;
+            margin-left: 1000px;
+/*             animation-name: buttonColorChanger;
+            animation-duration: 1s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; */
+            animation: buttonColorChanger 1s 0s infinite linear;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main"></div>
+    <div class="truck">
+        <div>
+            <img src="./truck-1.png" alt="">
+            <div class="wheel-outer">
+                <img src="./wheel-2.png" alt="">
+                <img src="./wheel-2.png" alt="">
+            </div>
+        </div>
+    </div>
+    <button type="text">Color changer</button>
+</body>
+
+</html>
