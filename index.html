@@ -58,28 +58,39 @@
 
         @keyframes truckMover {
             0% {
-                left: -200px;
+                left: -50px;
             }
 
             100% {
-                left: 120%;
+                left: 101%;
             }
         }
 
         .truck {
             position: fixed;
             bottom: 0;
-            animation-name: truckMover;
-            animation-duration: 10s;
+/*             animation-name: truckMover;
+            animation-duration: 5s;
             animation-delay: 0s;
             animation-iteration-count: infinite;
-            animation-timing-function: linear;
-            /* animation: truckMover 10s 0s infinite linear; */
+            animation-timing-function: linear; */
+            animation: truckMover 10s 0s infinite linear;
+        }
+        .truck img {
+            margin-block-end: -5px;
         }
         .wheel-outer {
             display: flex;
             justify-content: space-between;
             padding-inline: 15px;
+        }
+        @keyframes wheelRotate {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
         }
         @keyframes buttonColorChanger {
             0% {
@@ -88,6 +99,13 @@
             100% {
                 background: blue;
             }
+        }
+        .wheel-outer img {
+            animation-name: wheelRotate;
+            animation-duration: 1s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
         }
         button {
             outline: none;
@@ -111,10 +129,10 @@
     <div class="main"></div>
     <div class="truck">
         <div>
-            <img src="./truck-1.png" alt="">
+            <img src="./img/truck.png" alt="">
             <div class="wheel-outer">
-                <img src="./wheel-2.png" alt="">
-                <img src="./wheel-2.png" alt="">
+                <img src="./img/wheel.png" alt="">
+                <img src="./img/wheel.png" alt="">
             </div>
         </div>
     </div>
