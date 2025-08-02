@@ -1,0 +1,50 @@
+body {
+    background: #333;
+}
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    position: relative;
+/*     animation-name: myanimation;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+    animation-fill-mode: forwards; */
+    /* animation: myanimation 4s 0s infinite ease alternate; */
+}
+
+@keyframes myanimation {
+    0% {
+        background-color: white;
+        left: 0;
+        top: 0;
+        border-radius: 0 0 0 0;
+    }
+    25% {
+        background-color: red;
+        left: 300px;
+        top: 0;
+        border-radius: 50% 0 0 0;
+    }
+    50% {
+        background-color: green;
+        left: 300px;
+        top: 300px;
+        border-radius: 50% 50% 0 0;
+    }
+    75% {
+        background-color: blue;
+        left: 0;
+        top: 300px;
+        border-radius: 50% 50% 50% 0;
+    }
+    100% {
+        background-color: white;
+        left: 0;
+        top: 0;
+        border-radius: 50% 50% 50% 50%;
+    }
+}
