@@ -13,7 +13,7 @@ body {
     animation-timing-function: ease-in;
     animation-direction: alternate;
     animation-fill-mode: forwards; */
-    /* animation: myanimation 4s 0s infinite ease alternate; */
+    animation: myanimation 4s 0s infinite ease alternate;
 }
 
 @keyframes myanimation {

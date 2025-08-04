@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.heading {
+    color: blue;
+    font-size: 25px;
+    /* Normal method */
+/*     transition-property: font-size;
+    transition-duration: .5s;
+    transition-delay: 1s;
+    transition-timing-function: ease-in; */
+    /* Shortcut */
+    transition: all 0.5s 2s ease-in;
+}
+.heading:hover {
+    color: green;
+    font-size: 38px;
+    letter-spacing: 10px;
+}
+
+                                /* Transitions */
+                                /* Transitions Property */
+/* 1. Transition Property (transition-property) : Chooses the property to add the transition to.
+2. Transition Duration (transition-delay) : The time it takes for the transition to occur.
+3. Transition Delay (transition-delay) : Adds a delay to the transition before it start.
+4. Transition Timing Function (transition-timing-function): Focuses on how transition plays out. i.e is going to be linear, ease, ease-in e.t.c */
+
+                            /* Transition Shorthand */
+/* transition: (property) (duration) (delay) (timing-function) */
+
+                            /* Animations */
+                            /* Animations Property */
+/* 1. Animations Name (animation-name) : This is the name you get from your keyframes.
+2. Animation Duration (animation-duration) : This involves how long the animation runs for.
+3. Animation Delay (animation-delay) : This includes the delay before the animation starts.
+4. Animation Iteration Count (animation-iteration-count) : This specifies the number of time the animation is going to run.
+5. Animation Timing Function (animation-timing-function) : This specifies the timing of how function works.
+6. Animation Direction (animation-direction) : It's default value is normal. Other examples of values it takes are alternate, reverse, alternate-reverse. 
+7. Animation Fill Mode (animation-fill-mode) : Specifies what styles we want to apply to our animation after the animation is complete. E.g of values it takes is forwards, backwards. */
+/* From - To Method allows two steps */
+/* e.g 1 */
+/* @keyframes grow {
+    from{
+        width: 200px;
+        height: 200px;
+        background: red;
+    }
+    to{
+        width: 200px;
+        height: 400px;
+        background: green;
+    }
+} */
+ /* Percentage method allows multiple steps */
+ /* e.g 1 */
+/* @keyframes grow {
+    0%{
+        width: 200px;
+        height: 200px;
+        background: red;
+    }
+    50%{
+        width: 400px;
+        height: 200px;
+        background: yellow;
+    }
+    100%{
+        width: 200px;
+        height: 400px;
+        background: green;
+    }
+} */
+
+/* e.g 2 */
+/* @keyframes first-animation {
+    from {
+        width: 100px;
+        height: 100px;
+        background: blue;
+    }
+    to {
+        width: 10px;
+        height: 10px;
+        background: green;
+    }
+} */
+
+.first-box {
+/*     width: 20px;
+    height: 20px;
+    background: yellow;
+    border: 1px solid yellow;
+    animation-name: supersize;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 4;
+    animation-direction: alternate;
+    animation-fill-mode: both; */
+    /* Normal method */
+/*     animation-name: first-animation;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-iteration-count: 5;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+    animation-fill-mode: both; */
+    /* Shorthand */
+    /* animation: first-animation 1s 1s infinite ease alternate;  */
+}
+
+                            /* Animation Shorthand */
+/* animation: (name) (duration) (delay) (iteration-count) (timing-function) (direction) */
+
+/* @keyframes supersize {
+    0% {
+        width: 20px;
+        height: 20px;
+        background-color: yellow;
+    }
+    50% {
+        width: 50px;
+        height: 500px;
+        background-color: red;
+    }
+    100% {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+    }
+} */
+
+                                               /* Transforms */
+                                            /* Transform properties */
+/* 1. Scale: scaleX(), scaleY(), scale(x, y).
+2. Translate: It moves the position of the element in either in the position of the x or y axis or both. It takes multiple css unit values. 
+translateX(), translateY(), translate(x, y). */
+/* 3.Rotate: Rotate is using for rotating an elements. It takes degree(deg) values */
+/* 4.Skew : skewX(), skewY() skew(x, y) */
+
+.box {
+    width: 50px;
+    height: 50px;
+    background: red;
+    animation-name: transformMation;
+    animation-duration: 0.5s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+@keyframes transformMation{
+    100%{
+        transform: skewY(180deg);
+    }
+}
